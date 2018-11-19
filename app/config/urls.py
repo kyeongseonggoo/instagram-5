@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from config import settings
 from . import views
@@ -23,6 +23,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # /posts/로 들어오는 URL은 posts.urls모듈에서 처리
+    path('posts/', include('posts.urls')),
 
 ]
 
