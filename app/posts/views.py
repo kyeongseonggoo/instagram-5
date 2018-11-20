@@ -29,7 +29,7 @@ def post_list(request):
     #      결과: localhost:8000/posts/ 로 접근시
     #            이 view가 처리하도록 함
     posts = Post.objects.all()
-    content = {
+    context = {
         'posts': posts,
     }
-    return render(request, 'posts/post_list.html')
+    return render(request, 'posts/post_list.html', context)

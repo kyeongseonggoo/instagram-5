@@ -8,5 +8,5 @@ app_name = 'posts'
 
 urlppatterns = [
     # posts.urls내의 패턴들은, prefix가 '/posts/임
-    path('', views.post_list, name='post-list')
+    path('', views.post_list, name='post-list'),
 ]
